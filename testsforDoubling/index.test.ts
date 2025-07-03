@@ -14,7 +14,7 @@ test("one transfer", () => {
 	const svm = new LiteSVM();
     //we dont need a secret ley so just creating a publik key only
     const contractpubkey = PublicKey.unique()
-    svm.addProgramFromFile(contractpubkey,"./cpi.so")
+    svm.addProgramFromFile(contractpubkey,"./doubling.so")
 	const payer = new Keypair();
 	svm.airdrop(payer.publicKey, BigInt(LAMPORTS_PER_SOL));
 	const dataAccount = Keypair.generate();
