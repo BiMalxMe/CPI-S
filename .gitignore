@@ -1,2 +1,101 @@
-/target
-.*
+!.gitignore
+# ========================
+# Rust / Cargo specific
+# ========================
+# Compiled executables and build artifacts
+/target/
+
+# Cargo metadata
+Cargo.lock # Usually committed for reproducibility, but sometimes ignored in libraries if you only care about Cargo.toml
+.cargo/
+
+# Rust-related temporary files
+**/*.rs.bk
+
+# Rust IDE / editor files
+.idea/ # IntelliJ Rust plugin
+.vscode/ # VS Code Rust-analyzer or similar settings
+rust-toolchain.toml # If you prefer to manage toolchain outside of source control (though often committed)
+
+# ========================
+# TypeScript / Node.js specific
+# ========================
+# Node.js dependencies
+/node_modules/
+
+# TypeScript compiled JavaScript and map files
+# These are generated from .ts files and should not be committed
+# Common output directories for TypeScript compilation
+/dist/
+/build/
+/lib/
+/out/
+*.js # Catch-all for compiled JS, but be careful if you have source .js files
+*.js.map # Source maps
+
+# TypeScript cache files
+.tsbuildinfo
+
+# Test coverage reports
+/coverage/
+
+# npm and yarn debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Next.js specific (if you're building a web app with Next.js)
+.next/
+
+# ========================
+# Common / OS / Editor files
+# ========================
+# Operating System files
+.DS_Store # macOS
+Thumbs.db # Windows
+ehthumbs.db # Windows
+Desktop.ini # Windows
+
+# Environment variables
+# Contains sensitive information like API keys, never commit these!
+.env
+.env.local
+.env.*.local # For different environments like .env.development.local
+
+# IDE and Editor specific files (more general)
+*.iml # IntelliJ IDEA project files
+.project # Eclipse project files
+.classpath # Eclipse classpath
+.settings/ # Eclipse settings directory
+*.sublime-project # Sublime Text project
+*.sublime-workspace # Sublime Text workspace
+
+# Logs and databases (general)
+*.log
+*.sql
+*.sqlite
+*.db
+
+# Temporary files created by various tools
+*~
+*.bak
+*.swp
+*.swo
+
+# ========================
+# Solana specific (if applicable)
+# ========================
+# Solana program build output
+/target/deploy/ # This is where your compiled Solana program .so files go
+
+# Anchor framework specific files
+.anchor/ # Anchor framework build/IDL output
+
+# Client-side program ID file (often generated)
+program-id.json
+
+# If you have specific keys or wallet files that should never be committed
+# Be VERY careful with private keys; they should *never* be in source control
+# This is an example, adjust as needed for your specific project's sensitive files
+*.json.keypair # e.g., for test keypairs, but should generally be excluded if they hold private keys
+.env.secret
