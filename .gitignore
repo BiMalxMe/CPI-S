@@ -87,7 +87,7 @@ Desktop.ini # Windows
 # ========================
 # Solana program build output
 /target/deploy/ # This is where your compiled Solana program .so files go
-
+cpi-contract/target/
 # Anchor framework specific files
 .anchor/ # Anchor framework build/IDL output
 
